@@ -10,7 +10,7 @@ const Schema = mongoose.Schema,
     
     const calificacionSchema = new Schema({
         calificacion: ObjectId,
-        usuario:Object,
+        usuario:Populate,
         estrellas:String,
         comentarios:String,
         fecha:String,

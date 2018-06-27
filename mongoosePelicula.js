@@ -20,26 +20,10 @@ const Schema = mongoose.Schema,
         portada:String,
         actores:Array,
         video:String,
-        calificacion:Object
+        calificacion:Populate
     })
     
-    const calificacionSchema = new Schema({
-        calificacion: ObjectId,
-        usuario:Object,
-        estrellas:String,
-        comentarios:String,
-        fecha:String,
     
-    })
-
-    const usuarioSchema = new Schema({
-        usuario: ObjectId,
-        nombre:String,
-        apellidos:String,
-        email:String,
-        fechaNacimiento:String,
-    
-    })
     
     var Pelicula = mongoose.model('Pelicula',peliculaSchema)
     var Calificacion = mongoose.model('Calificacion',calificacionSchema)
