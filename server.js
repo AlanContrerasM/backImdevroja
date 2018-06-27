@@ -10,7 +10,9 @@ var cors = require('cors')
 
 
 //para llamar un archivo que esta en esta carpeta usamos ./ y asi importamos archivos
-const {Articulo,Factura} = require('./mongooseClient')
+const {Pelicula} = require('./mongoosePelicula')
+const {Calificacion} = require('./mongooseCalificacion')
+const {Usuario} = require('./mongooseUsuario')
 
 const PORT = process.env.PORT || 3000
 
@@ -21,7 +23,21 @@ app.use(bodyParser.json());
 app.get('/',(req,res)=>{
     res.send("Arriba")
 })
-//Todo lo de articulos
+
+//CRUD de peliculas
+
+
+
+
+//CRUD de calificaciones
+
+
+
+
+//CRUD de usuarios
+
+
+
 
 
 
