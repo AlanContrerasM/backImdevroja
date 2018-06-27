@@ -25,7 +25,7 @@ app.get('/',(req,res)=>{
 })
 
 //CRUD de peliculas
-
+console.log("crud peliculas")
 
 
 
