@@ -30,7 +30,7 @@ app.get('/',(req,res)=>{
 
 
 //CRUD de calificaciones
-
+console.log('crudcalificaciones')
 
 
 
