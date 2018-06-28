@@ -1,14 +1,14 @@
 const mongoose = require('mongoose');
 //ese link lo sacamos de mlab en users.
-mongoose.connect('mongodb://imdevroja:a12345@ds041546.mlab.com:41546/papeleria');
-
+///user emma pass a12345
+mongoose.connect('mongodb://emma:a12345@ds119171.mlab.com:19171/imdevroja');
 console.log(mongoose.connection.readyState)
 
 const Schema = mongoose.Schema,
     ObjectId = Schema.ObjectId
 
     const usuarioSchema = new Schema({
-        usuario: ObjectId,
+        usuario:ObjectId,
         nombre:String,
         apellidos:String,
         email:String,
