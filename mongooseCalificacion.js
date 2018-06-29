@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const {Usuario} = require('./mongooseUsuario')
+//const {Usuario} = require('./mongooseUsuario')
 //ese link lo sacamos de mlab en users.
 mongoose.connect('mongodb://imdevroja:a12345@ds135534.mlab.com:35534/imdevroja');
 

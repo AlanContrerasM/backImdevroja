@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const {Calificacion} = require('./mongooseCalificacion')
+//const {Calificacion} = require('./mongooseCalificacion')
 //ese link lo sacamos de mlab en users.
 mongoose.connect('mongodb://imdevroja:a12345@ds135534.mlab.com:35534/imdevroja');
 
