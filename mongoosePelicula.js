@@ -21,7 +21,7 @@ const Schema = mongoose.Schema,
         portada:String,
         actores:Array,
         video:String,
-        calificacion: [{ type: Schema.Types.ObjectId, ref: 'Calificacion' }]
+        calificacion: []//[{ type: Schema.Types.ObjectId, ref: 'Calificacion' }]
     })
 
     const articuloSchema = new Schema({
