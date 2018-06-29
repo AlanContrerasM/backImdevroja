@@ -21,7 +21,7 @@ const Schema = mongoose.Schema,
         portada:String,
         actores:Array,
         video:String,
-        calificacion: []//[{ type: Schema.Types.ObjectId, ref: 'Calificacion' }]
+        calificacion: []
     })
 
     const articuloSchema = new Schema({

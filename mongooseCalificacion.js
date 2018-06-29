@@ -11,7 +11,7 @@ const Schema = mongoose.Schema,
     
     const calificacionSchema = new Schema({
         calificacion: ObjectId,
-        usuario: [],//[{ type: ObjectId, ref: 'Usuario', autopopulate:true }],
+        usuario: [],
         estrellas:String,
         comentarios:String,
         fecha:String,
