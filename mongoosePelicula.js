@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
+const {Calificacion} = require('./mongooseCalificacion')
 //ese link lo sacamos de mlab en users.
-mongoose.connect('mongodb://imdevroja:a12345@ds041546.mlab.com:41546/papeleria');
+mongoose.connect('mongodb://imdevroja:a12345@ds135534.mlab.com:35534/imdevroja');
 
 console.log(mongoose.connection.readyState)
 
@@ -20,29 +21,21 @@ const Schema = mongoose.Schema,
         portada:String,
         actores:Array,
         video:String,
-        calificacion:Object
-    })
-    
-    const calificacionSchema = new Schema({
-        calificacion: ObjectId,
-        usuario:Object,
-        estrellas:String,
-        comentarios:String,
-        fecha:String,
-    
+        calificacion: [{ type: Schema.Types.ObjectId, ref: 'Calificacion' }]
     })
 
-    const usuarioSchema = new Schema({
-        usuario: ObjectId,
-        nombre:String,
-        apellidos:String,
-        email:String,
-        fechaNacimiento:String,
+    const articuloSchema = new Schema({
+        article: ObjectId,
+        name:String,
+        price:Number,
+        stock:Number,
+        description:String
     
     })
     
+
     var Pelicula = mongoose.model('Pelicula',peliculaSchema)
-    var Calificacion = mongoose.model('Calificacion',calificacionSchema)
-    var Usuario = mongoose.model('Usuario', usuarioSchema)
+    var Articulo = mongoose.model('Articulo',articuloSchema)
+
     
-    module.exports = {Pelicula, Calificacion, Usuario}
+    module.exports = {Pelicula, Articulo}

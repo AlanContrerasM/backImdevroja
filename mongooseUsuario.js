@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 //ese link lo sacamos de mlab en users.
-mongoose.connect('mongodb://imdevroja:a12345@ds041546.mlab.com:41546/papeleria');
+mongoose.connect('mongodb://imdevroja:a12345@ds135534.mlab.com:35534/imdevroja');
 
 console.log(mongoose.connection.readyState)
 
